@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏗️ GPObras Frontend (Ambiente de Estudo)
 
-## Getting Started
+> Status: 🚧 Em Desenvolvimento (Sprint 1: Interface e Mock Data)
 
-First, run the development server:
+## 🎯 Sobre o Projeto
+Este repositório é uma réplica de estudo da interface de um Sistema de Orçamentação para Engenharia Civil.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O objetivo é simular o ambiente de desenvolvimento de uma aplicação real, focando na construção de um Frontend moderno, tipado e responsivo, preparando o terreno para integração futura com uma API Python (FastAPI).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Diferencial: O projeto não utiliza HTML/CSS puro. Toda a estrutura é baseada em componentes React reutilizáveis e tipagem estrita com TypeScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tecnologias Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Core:**
+* Framework: Next.js 15 (App Router & Server Components)
+* Linguagem: TypeScript (Interface Strict Typing)
+* Estilização: Tailwind CSS v4
 
-## Learn More
+**Bibliotecas & Ferramentas:**
+* lucide-react: Ícones vetoriais.
+* clsx / tailwind-merge: Gerenciamento dinâmico de classes CSS.
+* eslint: Padronização de código.
 
-To learn more about Next.js, take a look at the following resources:
+## ⚡ Funcionalidades Implementadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ✅ Sprint 1: UI & Lógica de Renderização
+- [x] Setup do Ambiente: Configuração do Next.js com TypeScript e ESLint.
+- [x] Componentização: Criação do componente ItemCard para exibição de itens de orçamento.
+- [x] Mock Data: Simulação de dados de API via arquivo estático (mock.ts) para testes de interface.
+- [x] Cálculo em Tempo Real: Utilização do método .reduce() para calcular o valor total da obra automaticamente baseado nos dados renderizados.
+- [x] Design Responsivo: Layout adaptável (Grid System) utilizando Tailwind CSS.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔜 Próximos Passos (Roadmap)
+- [ ] Gerenciamento de Estado: Implementação de useState para adicionar novos itens via formulário.
+- [ ] Integração com API: Consumo de dados reais do Backend (FastAPI/Python) via fetch.
+- [ ] CRUD Completo: Funcionalidades de criar, editar e excluir itens do orçamento.
 
-## Deploy on Vercel
+## 📂 Estrutura do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+src/
+├── app/
+│   ├── data/       # Dados fictícios (Mock) para desenvolvimento
+│   ├── types.ts    # Contratos de dados (Interfaces TypeScript)
+│   ├── page.tsx    # Página principal (Dashboard)
+│   └── globals.css # Configurações do Tailwind
+├── components/
+│   └── ItemCard.tsx # Componente visual de item de orçamento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Como Rodar Localmente
+
+1. Clone o repositório:
+   git clone https://github.com/Matheus-MacielCardozo/GPObras_LearningCopy.git
+
+2. Instale as dependências:
+   npm install
+
+3. Rode o servidor de desenvolvimento:
+   npm run dev
+
+4. Acesse http://localhost:3000 no seu navegador.
+
+---
+Desenvolvido por Matheus Maciel como parte do portfólio de estudos em Desenvolvimento Fullstack.
